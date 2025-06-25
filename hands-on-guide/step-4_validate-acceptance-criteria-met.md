@@ -1,4 +1,6 @@
-# 4. Feature: validate acceptance criteria met
+# Hands-On Guide
+
+## Step 4. Feature: Validate Acceptance Criteria Met
 
 ### **Goal**
 

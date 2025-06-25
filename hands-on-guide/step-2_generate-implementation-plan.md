@@ -1,4 +1,6 @@
-# 2. Feature: generate an implementation plan
+# Hands-On Guide
+
+## Step 2. Feature: Generate an Implementation Plan
 
 ### **Goal**
 
@@ -27,5 +29,5 @@ You'll see a new `PHWF-xxxx.md` implementation file in the `/implementation-plan
 
 ### **Next**
 
-* [Step 3: Feature - Generate API code](step-3_generate-api-code.md)
+* [Step 3: Feature - Generate API Code](step-3_generate-api-code.md)
 
