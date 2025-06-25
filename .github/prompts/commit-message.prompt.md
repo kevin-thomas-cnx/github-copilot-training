@@ -1,0 +1,4 @@
+1.  Execute the command `git diff --cached`.
+    -   If there is no output, return a message indicating that there are no staged changes to commit.
+    -   If there is output, generate a commit message. It should be concise, descriptive, and follow the conventional commit format. Include the type of change (e.g., feat, fix, chore) and a brief description of the changes made. If applicable, reference any related issues or pull requests.
+2.  If the commit message is successfully generated, automatically run the git commit command using the generated commit message, and provide a confirmation message.

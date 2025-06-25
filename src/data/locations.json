@@ -1,0 +1,272 @@
+[
+  {
+    "id": "1",
+    "name": "New York City",
+    "type": "City",
+    "state": "NY",
+    "country": "USA",
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "airportCode": "JFK"
+  },
+  {
+    "id": "2",
+    "name": "London",
+    "type": "City",
+    "state": "",
+    "country": "UK",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "airportCode": "LHR"
+  },
+  {
+    "id": "3",
+    "name": "Los Angeles International Airport",
+    "type": "Airport",
+    "state": "CA",
+    "country": "USA",
+    "latitude": 33.9416,
+    "longitude": -118.4085,
+    "airportCode": "LAX"
+  },
+  {
+    "id": "4",
+    "name": "Tokyo",
+    "type": "City",
+    "state": "",
+    "country": "Japan",
+    "latitude": 35.6895,
+    "longitude": 139.6917,
+    "airportCode": "HND"
+  },
+  {
+    "id": "5",
+    "name": "Berlin Brandenburg Airport",
+    "type": "Airport",
+    "state": "Brandenburg",
+    "country": "Germany",
+    "latitude": 52.3667,
+    "longitude": 13.5033,
+    "airportCode": "BER"
+  },
+  {
+    "id": "6",
+    "name": "Sydney",
+    "type": "City",
+    "state": "NSW",
+    "country": "Australia",
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "airportCode": "SYD"
+  },
+  {
+    "id": "7",
+    "name": "Dubai International Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "UAE",
+    "latitude": 25.2532,
+    "longitude": 55.3657,
+    "airportCode": "DXB"
+  },
+  {
+    "id": "8",
+    "name": "Toronto Pearson International Airport",
+    "type": "Airport",
+    "state": "ON",
+    "country": "Canada",
+    "latitude": 43.6777,
+    "longitude": -79.6248,
+    "airportCode": "YYZ"
+  },
+  {
+    "id": "9",
+    "name": "Paris",
+    "type": "City",
+    "state": "",
+    "country": "France",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "airportCode": "CDG"
+  },
+  {
+    "id": "10",
+    "name": "Singapore Changi Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "Singapore",
+    "latitude": 1.3502,
+    "longitude": 103.9940,
+    "airportCode": "SIN"
+  },
+  {
+    "id": "11",
+    "name": "Hong Kong International Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "Hong Kong",
+    "latitude": 22.3080,
+    "longitude": 113.9185,
+    "airportCode": "HKG"
+  },
+  {
+    "id": "12",
+    "name": "São Paulo",
+    "type": "City",
+    "state": "SP",
+    "country": "Brazil",
+    "latitude": -23.5505,
+    "longitude": -46.6333,
+    "airportCode": "GRU"
+  },
+  {
+    "id": "13",
+    "name": "Amsterdam Airport Schiphol",
+    "type": "Airport",
+    "state": "",
+    "country": "Netherlands",
+    "latitude": 52.3086,
+    "longitude": 4.7639,
+    "airportCode": "AMS"
+  },
+  {
+    "id": "14",
+    "name": "Madrid",
+    "type": "City",
+    "state": "",
+    "country": "Spain",
+    "latitude": 40.4168,
+    "longitude": -3.7038,
+    "airportCode": "MAD"
+  },
+  {
+    "id": "15",
+    "name": "Istanbul Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "Turkey",
+    "latitude": 41.2753,
+    "longitude": 28.7519,
+    "airportCode": "IST"
+  },
+  {
+    "id": "16",
+    "name": "Moscow Sheremetyevo International Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "Russia",
+    "latitude": 55.9726,
+    "longitude": 37.4146,
+    "airportCode": "SVO"
+  },
+  {
+    "id": "17",
+    "name": "Cape Town International Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "South Africa",
+    "latitude": -33.9681,
+    "longitude": 18.6013,
+    "airportCode": "CPT"
+  },
+  {
+    "id": "18",
+    "name": "Los Angeles",
+    "type": "City",
+    "state": "CA",
+    "country": "USA",
+    "latitude": 34.0522,
+    "longitude": -118.2437,
+    "airportCode": ""
+  },
+  {
+    "id": "19",
+    "name": "Chicago O'Hare International Airport",
+    "type": "Airport",
+    "state": "IL",
+    "country": "USA",
+    "latitude": 41.9742,
+    "longitude": -87.9073,
+    "airportCode": "ORD"
+  },
+  {
+    "id": "20",
+    "name": "Bangkok Suvarnabhumi Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "Thailand",
+    "latitude": 13.6811,
+    "longitude": 100.7476,
+    "airportCode": "BKK"
+  },
+  {
+    "id": "21",
+    "name": "Rio de Janeiro",
+    "type": "City",
+    "state": "RJ",
+    "country": "Brazil",
+    "latitude": -22.9068,
+    "longitude": -43.1729,
+    "airportCode": ""
+  },
+  {
+    "id": "22",
+    "name": "San Francisco International Airport",
+    "type": "Airport",
+    "state": "CA",
+    "country": "USA",
+    "latitude": 37.6213,
+    "longitude": -122.3790,
+    "airportCode": "SFO"
+  },
+  {
+    "id": "23",
+    "name": "Kuala Lumpur International Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "Malaysia",
+    "latitude": 2.7456,
+    "longitude": 101.7096,
+    "airportCode": "KUL"
+  },
+  {
+    "id": "24",
+    "name": "Mexico City",
+    "type": "City",
+    "state": "CDMX",
+    "country": "Mexico",
+    "latitude": 19.4326,
+    "longitude": -99.1332,
+    "airportCode": "MEX"
+  },
+  {
+    "id": "25",
+    "name": "Seoul Incheon International Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "South Korea",
+    "latitude": 37.4602,
+    "longitude": 126.4407,
+    "airportCode": "ICN"
+  },
+  {
+    "id": "26",
+    "name": "Barcelona",
+    "type": "City",
+    "state": "",
+    "country": "Spain",
+    "latitude": 41.3851,
+    "longitude": 2.1734,
+    "airportCode": ""
+  },
+  {
+    "id": "27",
+    "name": "Doha Hamad International Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "Qatar",
+    "latitude": 25.2731,
+    "longitude": 51.6083,
+    "airportCode": "DOH"
+  }
+]
