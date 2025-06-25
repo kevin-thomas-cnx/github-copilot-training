@@ -1,4 +1,6 @@
-# 5. Diagram: logical architecture diagram
+# Hands-On Guide
+
+## Step 5. Diagram: Logical Architecture Diagram
 
 ### **Goal**
 
@@ -21,6 +23,7 @@ To generate a logical architecture diagram for the application.
 
    - Open the diagram file, right-click within the body of the file, and select _**Preview Diagram**_.
 
+   ![Logical Architecture Diagram](img/logical-architecture.png)
 
 ### **Outcome**
 

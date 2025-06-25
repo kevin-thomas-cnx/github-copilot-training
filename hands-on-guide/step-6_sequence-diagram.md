@@ -1,4 +1,6 @@
-# 6. Diagram: sequence diagram
+# Hands-On Guide
+
+## Step 6. Diagram: Sequence Diagram
 
 ### **Goal**
 
@@ -21,6 +23,7 @@ To generate a sequence diagram for a user flow.
 
    - Open the diagram file, right-click within the body of the file, and select _**Preview Diagram**_.
 
+   ![Sequence Diagram](img/sequence-diagram.png)
 
 ### **Outcome**
 

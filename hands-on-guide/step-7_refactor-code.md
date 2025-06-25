@@ -1,4 +1,6 @@
-# 7. Refactor Code
+# Hands-On Guide
+
+## Step 7. Refactor Code
 
 ### **Goal**
 

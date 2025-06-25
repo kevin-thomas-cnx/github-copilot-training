@@ -1,4 +1,6 @@
-# 8. Documentation
+# Hands-On Guide
+
+## Step 8. Documentation
 
 ### **Goal**
 
