@@ -110,6 +110,27 @@ pnpm test:e2e
 
 ---
 
+## Hands-On Exercises
+
+To help you get familiar with GitHub Copilot, this project includes a set of hands-on exercises. These exercises will guide you through setup, user story generation, implementation planning, API coding, and more—all using Copilot's features.
+
+Start with the first exercise: [Step 0: Setup](hands-on-guide/step-0_setup.md)
+
+---
+
+## API Endpoints
+
+### Hourly Forecast
+
+- **GET** `/api/v1/forecast/hourly?lat={latitude}&lon={longitude}`
+  - Returns a 24-hour hourly weather forecast for the specified location.
+  - Query parameters:
+    - `lat` (number, required): Latitude
+    - `lon` (number, required): Longitude
+  - Response: `{ hourly: [ { time, temperature, precipitation, condition } ] }`
+
+---
+
 ## VS Code Extensions
 
 This project recommends the following VS Code extensions (see `.vscode/extensions.json`):
