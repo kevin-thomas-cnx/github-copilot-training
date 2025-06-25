@@ -122,26 +122,31 @@ This project recommends the following VS Code extensions (see `.vscode/extension
 
 ## Copilot Customizations
 
-See `.github/copilot-instructions.md` for custom Copilot instructions, including:
-- Testing philosophy (Jest, unit test focus, 80%+ coverage)
-- Commit message guidelines (Conventional Commits)
-- Problem-solving approach (suggest fix, then explain root cause)
+All Copilot custom instructions are now managed in modular files under `.github/instructions/` and referenced in `.vscode/settings.json`.
 
-These help ensure consistent code quality and collaboration.
+See the `.github/instructions/` directory for details on each instruction type.
 
 ---
 
 ## Provided Copilot Prompts
 
-This project includes custom prompts in `.github/prompts/` that you can use via the Copilot Chat forward slash (/) command in VS Code. Each prompt provides a specialized workflow:
+Custom Copilot prompts are managed in the `.github/prompts/` directory. Each prompt is modular and can be updated or extended as needed. Use the Copilot Chat forward slash (/) command in VS Code to access available prompts. The set of prompts is regularly expanded—check the `.github/prompts/` directory for the most up-to-date list.
 
-| Slash Command | What it Does |
-|--------------|-------------|
-| `/sequence-diagram` | Generates a Mermaid.js sequence diagram using a structured template. Useful for visualizing system interactions. |
-| `/user-stories` | Produces INVEST-based user stories for API and UI components, with clear formatting and acceptance criteria. |
-| `/logical-architecture-diagram` | Creates a Mermaid.js logical architecture diagram, styled and grouped by component type, based on the actual codebase. |
+Below is a detailed, alphabetized list of available prompts:
 
-To use a prompt, type `/` in Copilot Chat and select the desired command.
+| Slash Command                   | What it Does                                                                                 |
+|---------------------------------|---------------------------------------------------------------------------------------------|
+| `/commit-message`               | Generates a conventional commit message from staged changes and runs the commit command.     |
+| `/document-react-components`    | Adds comprehensive TSDoc comments and usage examples to React component code.                |
+| `/document-typescript-code`     | Adds detailed TSDoc comments and usage examples to TypeScript or JavaScript code.            |
+| `/implementation-plan`          | Produces a step-by-step, actionable implementation plan for a user story, including tests and dependencies. |
+| `/logical-architecture-diagram` | Creates a Mermaid.js diagram visualizing the application's architecture, styled by component type. |
+| `/refactor-dry`                 | Reviews code for duplication and suggests DRY (Don't Repeat Yourself) improvements with examples. |
+| `/refactor-solid`               | Reviews code for SOLID principle violations and suggests actionable refactoring with explanations. |
+| `/sequence-diagram`             | Generates a Mermaid.js sequence diagram using a structured template and best practices.      |
+| `/user-stories`                 | Produces INVEST-based user stories for API and UI components, with clear formatting and acceptance criteria. |
+
+For the latest list and details, see the `.github/prompts/` directory.
 
 ---
 
