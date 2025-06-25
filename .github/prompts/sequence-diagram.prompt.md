@@ -1,6 +1,6 @@
 Use the following mermaid.js format when creating the sequence diagram definition:
 
-%%{init: {'theme': 'neutral'}}%%
+%%{init: {'theme': 'default'}}%%
 sequenceDiagram
 %% Defining the actors
 actor User
