@@ -1,6 +1,6 @@
 # Hands-On Guide
 
-## Step 8. Documentation
+## Exercise 8: Documentation
 
 ### **Goal**
 

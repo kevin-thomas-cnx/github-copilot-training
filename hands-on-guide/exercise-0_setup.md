@@ -1,6 +1,6 @@
 # Hands-On Guide
 
-## Step 0. Setup the application using the Copilot Agent
+## Exercise 0: Setup the application using the Copilot Agent
 
 Throughout these exercises, you'll be using the [**Copilot Agent Mode**](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode).
 
@@ -36,4 +36,4 @@ You'll see the sample weather app in your browser.
 
 ### **Next**
 
-* [Step 1: Generate User Stories](step-1_generate-user-stories.md)
+* [Exercise 1: Generate User Stories](exercise-1_generate-user-stories.md)

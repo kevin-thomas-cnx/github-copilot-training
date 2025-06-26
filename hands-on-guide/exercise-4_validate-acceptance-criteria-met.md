@@ -1,6 +1,6 @@
 # Hands-On Guide
 
-## Step 4. Feature: Validate Acceptance Criteria Met
+## Exercise 4: Feature - Validate Acceptance Criteria Met
 
 ### **Goal**
 
@@ -27,5 +27,5 @@ You'll see confirmation that the API feature's acceptance criteria have been met
 
 ### **Next**
 
-* [Step 5: Diagrams - Logical Architecture Diagram](step-5_logical-architecture-diagram.md)
+* [Exercise 5: Diagrams - Logical Architecture Diagram](exercise-5_logical-architecture-diagram.md)
 

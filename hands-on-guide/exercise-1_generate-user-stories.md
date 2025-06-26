@@ -1,6 +1,6 @@
 # Hands-On Guide
 
-## Step 1. Generate User Stories
+## Exercise 1: Generate User Stories
 
 ### **Goal**
 
@@ -25,5 +25,5 @@ You'll see a series of new `User-Story_phwf_xxxx.md` files in the `/requirements
 
 ### **Next**
 
-* [Step 2: Feature - Generate an Implementation Plan](step-2_generate-implementation-plan.md)
+* [Exercise 2: Feature - Generate an Implementation Plan](exercise-2_generate-implementation-plan.md)
 

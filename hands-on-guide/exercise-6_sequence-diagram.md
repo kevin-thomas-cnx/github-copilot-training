@@ -1,6 +1,6 @@
 # Hands-On Guide
 
-## Step 6. Diagram: Sequence Diagram
+## Exercise 6: Diagram - Sequence Diagram
 
 ### **Goal**
 
@@ -32,5 +32,5 @@ You'll see a sequence diagram has been created for the user flow.
 
 ### **Next**
 
-* [Step 7: Refactor Code](step-7_refactor-code.md)
+* [Exercise 7: Refactor Code](exercise-7_refactor-code.md)
 

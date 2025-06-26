@@ -1,6 +1,6 @@
 # Hands-On Guide
 
-## Step 7. Refactor Code
+## Exercise 7: Refactor Code
 
 ### **Goal**
 
@@ -38,5 +38,5 @@ You'll see the code has been refactored to apply DRY principles and successfully
 
 ### **Next**
 
-* [Step 8: Documentation](step-8_documentation.md)
+* [Exercise 8: Documentation](exercise-8_documentation.md)
 

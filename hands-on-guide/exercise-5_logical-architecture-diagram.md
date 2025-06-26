@@ -1,6 +1,6 @@
 # Hands-On Guide
 
-## Step 5. Diagram: Logical Architecture Diagram
+## Exercise 5: Diagram - Logical Architecture Diagram
 
 ### **Goal**
 
@@ -32,5 +32,5 @@ You'll see a logical architecture diagram has been generated for the application
 
 ### **Next**
 
-* [Step 6: Diagrams - Sequence Diagram](step-6_sequence-diagram.md)
+* [Exercise 6: Diagrams - Sequence Diagram](exercise-6_sequence-diagram.md)
 

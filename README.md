@@ -114,7 +114,7 @@ pnpm test:e2e
 
 To help you get familiar with GitHub Copilot, this project includes a set of hands-on exercises. These exercises will guide you through setup, user story generation, implementation planning, API coding, and more—all using Copilot's features.
 
-Start with the first exercise: [Step 0: Setup](hands-on-guide/step-0_setup.md)
+Start with the first exercise: [Exercise 0: Setup](hands-on-guide/exercise-0_setup.md)
 
 ---
 

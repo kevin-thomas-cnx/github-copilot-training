@@ -1,6 +1,6 @@
 # Hands-On Guide
 
-## Step 3. Feature: Generate API Code
+## Exercise 3: Feature - Generate API Code
 
 ### **Goal**
 
@@ -47,5 +47,5 @@ You'll see the _**Hourly Forecast API**_ successfully implemented.
 
 ### **Next**
 
-* [Step 4: Feature - Validate Acceptance Criteria Met](step-4_validate-acceptance-criteria-met.md)
+* [Exercise 4: Feature - Validate Acceptance Criteria Met](exercise-4_validate-acceptance-criteria-met.md)
 
