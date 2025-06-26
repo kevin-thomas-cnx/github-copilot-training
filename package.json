@@ -18,7 +18,9 @@
     "commander": "^14.0.0",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "swagger-ui-react": "^5.25.2",
+    "yaml": "^2.8.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.0",
