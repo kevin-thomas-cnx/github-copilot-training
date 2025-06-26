@@ -1,4 +1,4 @@
-# Hands-On Guide
+# Hands-On
 
 ## Exercise 3: Feature - Generate API Code
 

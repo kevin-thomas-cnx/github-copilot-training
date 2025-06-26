@@ -1,4 +1,4 @@
-# Hands-On Guide
+# Hands-On
 
 ## Exercise 1: Generate User Stories
 

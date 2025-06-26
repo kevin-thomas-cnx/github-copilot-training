@@ -1,4 +1,4 @@
-# Hands-On Guide
+# Hands-On
 
 ## Exercise 0: Setup the application using the Copilot Agent
 

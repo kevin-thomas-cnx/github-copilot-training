@@ -1,4 +1,4 @@
-# Hands-On Guide
+# Hands-On
 
 ## Exercise 7: Refactor Code
 

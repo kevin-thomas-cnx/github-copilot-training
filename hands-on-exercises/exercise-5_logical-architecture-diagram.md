@@ -1,4 +1,4 @@
-# Hands-On Guide
+# Hands-On
 
 ## Exercise 5: Diagram - Logical Architecture Diagram
 

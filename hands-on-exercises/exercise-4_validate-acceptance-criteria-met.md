@@ -1,4 +1,4 @@
-# Hands-On Guide
+# Hands-On
 
 ## Exercise 4: Feature - Validate Acceptance Criteria Met
 

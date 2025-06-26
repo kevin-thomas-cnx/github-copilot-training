@@ -1,4 +1,4 @@
-# Hands-On Guide
+# Hands-On
 
 ## Exercise 2: Feature - Generate an Implementation Plan
 
