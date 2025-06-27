@@ -9,8 +9,6 @@ const SWAGGER_URL = '/api/swagger.yaml'; // updated to new API route
 export default function ApiDocsPage() {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
-    // Import CSS only on client
-    import('swagger-ui-react/swagger-ui.css');
     setIsClient(true);
   }, []);
 
