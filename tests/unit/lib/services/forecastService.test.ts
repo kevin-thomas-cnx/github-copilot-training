@@ -1,4 +1,4 @@
-import { fetchWeeklyForecast } from '@/lib/services/forecastService';
+import { fetchWeeklyForecast, fetchHourlyForecast } from '@/lib/services/forecastService';
 import axios from 'axios';
 import { HttpError } from '@/lib/utils/errors';
 
@@ -169,5 +169,56 @@ describe('fetchWeeklyForecast', () => {
   it('throws HttpError on non-axios error', async () => {
     mockedAxios.get.mockRejectedValueOnce(new Error('Some other error'));
     await expect(fetchWeeklyForecast(latitude, longitude, units)).rejects.toThrow('An unexpected error occurred while fetching weather data.');
+  });
+});
+
+describe('fetchHourlyForecast', () => {
+  const latitude = 40.7128;
+  const longitude = -74.0060;
+
+  it('returns formatted hourly forecast data on success', async () => {
+    mockedAxios.get.mockResolvedValueOnce({
+      data: {
+        hourly: {
+          time: [
+            '2025-06-17T00:00:00Z',
+            '2025-06-17T01:00:00Z',
+            '2025-06-17T02:00:00Z',
+          ],
+          temperature_2m: [22, 21, 20],
+          precipitation: [0, 0.1, 0],
+          weather_code: [0, 1, 3],
+        },
+      },
+    });
+    const result = await fetchHourlyForecast(latitude, longitude);
+    expect(result.hourly.length).toBe(3);
+    expect(result.hourly[0].time).toBe('2025-06-17T00:00:00Z');
+    expect(result.hourly[0].temperature).toBe(22);
+    expect(result.hourly[0].precipitation).toBe(0);
+    expect(result.hourly[0].condition).toBe('Clear');
+    expect(result.hourly[1].condition).toBe('Partly Cloudy');
+    expect(result.hourly[2].condition).toBe('Cloudy');
+  });
+
+  it('throws HttpError on incomplete data', async () => {
+    mockedAxios.get.mockResolvedValueOnce({
+      data: {
+        hourly: {
+          time: ['2025-06-17T00:00:00Z'],
+          // missing temperature_2m, precipitation, weather_code
+        },
+      },
+    });
+    await expect(fetchHourlyForecast(latitude, longitude)).rejects.toThrow(HttpError);
+  });
+
+  it('throws HttpError on upstream error', async () => {
+    mockedAxios.get.mockRejectedValueOnce({
+      isAxiosError: true,
+      response: { status: 502, data: { reason: 'Upstream error' } },
+      message: 'Bad Gateway',
+    });
+    await expect(fetchHourlyForecast(latitude, longitude)).rejects.toThrow(HttpError);
   });
 });

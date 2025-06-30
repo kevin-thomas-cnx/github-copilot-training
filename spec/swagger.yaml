@@ -96,6 +96,51 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
+  /forecast/hourly:
+    get:
+      summary: Get a 24-hour hourly weather forecast
+      description: Provides the next 24 hours of hourly weather data for a given location.
+      operationId: getHourlyForecast
+      parameters:
+        - in: query
+          name: lat
+          required: true
+          schema:
+            type: number
+            format: double
+          description: The latitude coordinate of the location.
+        - in: query
+          name: lon
+          required: true
+          schema:
+            type: number
+            format: double
+          description: The longitude coordinate of the location.
+      responses:
+        '200':
+          description: A 24-hour hourly weather forecast for the specified location.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HourlyForecastResponse'
+        '400':
+          description: Missing or invalid coordinates.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '502':
+          description: Upstream weather service error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: An unexpected error occurred.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
     Location:
@@ -183,3 +228,22 @@ components:
         '1': 'Mainly clear'
         '2': 'Partly cloudy'
         '3': 'Overcast'
+    HourlyForecast:
+      type: object
+      properties:
+        time:
+          type: string
+          format: date-time
+        temperature:
+          type: number
+        precipitation:
+          type: number
+        condition:
+          type: string
+    HourlyForecastResponse:
+      type: object
+      properties:
+        hourly:
+          type: array
+          items:
+            $ref: '#/components/schemas/HourlyForecast'
