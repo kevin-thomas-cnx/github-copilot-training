@@ -13,5 +13,6 @@
   ],
   "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
     { "file": ".github/instructions/pull-request-generation.md" }
-  ]
+  ],
+  "jest.jestCommandLine": "pnpm jest"
 }
