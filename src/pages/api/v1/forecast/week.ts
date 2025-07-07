@@ -1,11 +1,41 @@
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { fetchWeeklyForecast, ForecastData } from '@/lib/services/forecastService';
 import { HttpError } from '@/lib/utils/errors';
+
+/**
+ * API route handler for retrieving weekly weather forecasts.
+ *
+ * Accepts a `GET` request with `latitude`, `longitude`, and optional `units` query parameters and returns the 7-day forecast for the specified location.
+ *
+ * @remarks
+ * Only `GET` requests are supported. Returns 400 for missing or invalid parameters, 405 for unsupported methods, and 500 for server errors.
+ *
+ * @param req - The Next.js API request object.
+ * @param res - The Next.js API response object.
+ * @returns A promise that resolves when the response is sent.
+ *
+ * @example
+ * // GET /api/v1/forecast/week?latitude=51.5074&longitude=-0.1278&units=metric
+ */
 
 type ErrorResponse = {
     error: string;
 };
 
+
+/**
+ * Handles the API request for weekly weather forecasts.
+ *
+ * @param req - The Next.js API request object.
+ * @param res - The Next.js API response object.
+ * @returns A promise that resolves when the response is sent.
+ * @throws 400 if required parameters are missing or invalid.
+ * @throws 405 if the HTTP method is not GET.
+ * @throws 500 for unexpected server errors.
+ * @example
+ * // GET /api/v1/forecast/week?latitude=40.7128&longitude=-74.0060&units=imperial
+ */
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<ForecastData | ErrorResponse>

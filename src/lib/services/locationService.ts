@@ -2,20 +2,63 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { HttpError } from '../utils/errors';
 
+/**
+ * Represents a geographic location, such as a city or airport.
+ *
+ * @remarks
+ * Used for location search and weather forecast queries.
+ *
+ * @example
+ * ```ts
+ * const loc: Location = {
+ *   id: '1',
+ *   name: 'London',
+ *   type: 'City',
+ *   state: 'England',
+ *   country: 'UK',
+ *   latitude: 51.5074,
+ *   longitude: -0.1278,
+ *   airportCode: null
+ * };
+ * ```
+ */
 export interface Location {
+    /** Unique identifier for the location. */
     id: string;
+    /** Name of the location (e.g., city or airport name). */
     name: string;
-    type: string; // e.g., "City", "Airport"
+    /** Type of location (e.g., "City", "Airport"). */
+    type: string;
+    /** State or region of the location. */
     state: string;
+    /** Country of the location. */
     country: string;
+    /** Latitude coordinate. */
     latitude: number;
+    /** Longitude coordinate. */
     longitude: number;
+    /** Optional airport code if applicable. */
     airportCode?: string | null;
 }
 
 let loadedLocations: Location[] | null = null;
 let loadError: HttpError | null = null;
 
+
+/**
+ * Loads and caches the locations data from the local JSON file.
+ *
+ * @remarks
+ * Throws an error if the file is missing, invalid, or cannot be parsed. Caches the result for future calls.
+ *
+ * @returns An array of {@link Location} objects.
+ * @throws {HttpError} If the file is missing, invalid, or cannot be parsed.
+ *
+ * @example
+ * ```ts
+ * const locations = loadLocationsData();
+ * ```
+ */
 export function loadLocationsData(): Location[] {
     // Return cached data if available
     if (loadedLocations) {
@@ -46,7 +89,6 @@ export function loadLocationsData(): Location[] {
             throw loadError;
         }
 
-
         loadedLocations = jsonData as Location[]; // Store successfully loaded data
         return loadedLocations;
 
@@ -61,15 +103,49 @@ export function loadLocationsData(): Location[] {
     }
 }
 
+
+/**
+ * Service for searching and retrieving location data.
+ *
+ * @remarks
+ * Loads location data from a local JSON file and provides search functionality.
+ * Throws errors for missing data or invalid queries.
+ *
+ * @example
+ * ```ts
+ * const service = new LocationService();
+ * const results = await service.searchLocations('London');
+ * ```
+ */
 export class LocationService {
+    /**
+     * Cached array of locations loaded from file.
+     */
     private locations: Location[];
 
+    /**
+     * Constructs a new LocationService and loads location data.
+     * @throws {HttpError} If loading the data fails.
+     */
     constructor() {
         // This will either return cached data or attempt to load,
         // throwing an error if loading failed (either now or on initial module load).
         this.locations = loadLocationsData();
     }
 
+    /**
+     * Searches for locations matching the provided query string.
+     *
+     * @param query - The search string to match against location name, state, country, or airport code.
+     * @returns A promise resolving to an array of matching {@link Location} objects.
+     * @throws {HttpError} 400 if the query is missing or invalid, 404 if no results, 500 for data errors.
+     *
+     * @example
+     * ```ts
+     * const service = new LocationService();
+     * const results = await service.searchLocations('JFK');
+     * ```
+     */
     async searchLocations(query: string): Promise<Location[]> {
         if (!query || query.trim() === '') {
             throw new HttpError(400, 'Query parameter is missing or invalid.');

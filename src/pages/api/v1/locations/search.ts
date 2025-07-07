@@ -1,7 +1,26 @@
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { LocationService, Location } from '@/lib/services/locationService';
 import { HttpError } from '@/lib/utils/errors';
+
+/**
+ * API route handler for searching locations by query string.
+ *
+ * Accepts a `GET` request with a `query` parameter and returns a list of matching locations.
+ *
+ * @remarks
+ * Only `GET` requests are allowed. Returns 400 if the query is missing or invalid.
+ * Returns 405 for unsupported methods. Handles custom and unexpected errors.
+ *
+ * @param req - The Next.js API request object.
+ * @param res - The Next.js API response object.
+ * @returns A promise that resolves when the response is sent.
+ *
+ * @example
+ * // Example request:
+ * // GET /api/v1/locations/search?query=London
+ */
 
 type LocationsResponse = {
     locations: Location[];
@@ -11,6 +30,15 @@ type ErrorResponse = {
     error: string;
 };
 
+
+/**
+ * Type guard to check if an error is an instance of HttpError.
+ *
+ * @param error - The error to check.
+ * @returns True if the error is an HttpError, false otherwise.
+ * @example
+ * if (isHttpError(err)) { ... }
+ */
 function isHttpError(error: any): error is HttpError {
     return (
         Boolean(error) &&
@@ -20,6 +48,19 @@ function isHttpError(error: any): error is HttpError {
     );
 }
 
+
+/**
+ * Handles the API request for searching locations.
+ *
+ * @param req - The Next.js API request object.
+ * @param res - The Next.js API response object.
+ * @returns A promise that resolves when the response is sent.
+ * @throws 400 if the query parameter is missing or invalid.
+ * @throws 405 if the HTTP method is not GET.
+ * @throws 500 for unexpected server errors.
+ * @example
+ * // GET /api/v1/locations/search?query=Paris
+ */
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<LocationsResponse | ErrorResponse>

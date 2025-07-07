@@ -1,6 +1,23 @@
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { fetchHourlyForecast, HourlyForecastResponse } from '@/lib/services/forecastService';
 import { HttpError } from '@/lib/utils/errors';
+
+/**
+ * API route handler for retrieving hourly weather forecasts.
+ *
+ * Accepts a `GET` request with `lat` and `lon` query parameters and returns the hourly forecast for the specified location.
+ *
+ * @remarks
+ * Only `GET` requests are supported. Returns 400 for missing or invalid parameters, 405 for unsupported methods, and 500 for server errors.
+ *
+ * @param req - The Next.js API request object.
+ * @param res - The Next.js API response object.
+ * @returns A promise that resolves when the response is sent.
+ *
+ * @example
+ * // GET /api/v1/forecast/hourly?lat=51.5074&lon=-0.1278
+ */
 
 export default async function handler(
   req: NextApiRequest,
