@@ -6,7 +6,6 @@ interface ErrorProps {
 }
 
 function CustomError({ statusCode, hasQA }: ErrorProps) {
-  // In QA mode, suppress the Next.js error overlay
   if (hasQA) {
     return (
       <div style={{ padding: 40, textAlign: 'center' }}>
@@ -15,7 +14,6 @@ function CustomError({ statusCode, hasQA }: ErrorProps) {
       </div>
     );
   }
-  // Default Next.js error rendering (will show overlay in dev)
   return (
     <div style={{ padding: 40, textAlign: 'center' }}>
       <h1>{statusCode ? `Error: ${statusCode}` : 'An error occurred'}</h1>
@@ -33,7 +31,6 @@ CustomError.getInitialProps = ({ res, err, query }: NextPageContext) => {
   } else {
     statusCode = 404;
   }
-  // Detect QA mode from env or query param
   const hasQA = process.env.NEXT_PUBLIC_QA === 'true' || query?.qa === 'true';
   return { statusCode, hasQA };
 };

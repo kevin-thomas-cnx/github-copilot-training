@@ -1,7 +1,8 @@
 import axios, { AxiosError } from 'axios';
-import { HttpError } from '../utils/errors'; // Relative path to utils within lib
+import { HttpError } from '../utils/errors';
 
-// This URL is based on the context for api.open-meteo.com: https://api.open-meteo.com/v1/forecast
+const WEATHER_API_URL = 'https://api.open-meteo.com/v1/forecast';
+
 const WEATHER_API_URL = 'https://api.open-meteo.com/v1/forecast';
 
 export interface DailyForecast {
@@ -16,19 +17,10 @@ export interface DailyForecast {
 export interface ForecastData {
     latitude: number;
     longitude: number;
-    units: string; // Will store the unit symbol like "°C" or "°F" from API response
+    units: string;
     forecast: DailyForecast[];
 }
 
-/**
- * Fetches the weekly weather forecast for a given location from Open-Meteo.
- *
- * @param latitude - The latitude of the location.
- * @param longitude - The longitude of the location.
- * @param unitsInput - The unit system for temperature ('metric' or 'imperial').
- * @returns A Promise that resolves to an object containing the forecast data.
- * @throws Will throw an HttpError if the weather service is unavailable or the request fails.
- */
 export const fetchWeeklyForecast = async (
     latitude: number,
     longitude: number,
@@ -41,7 +33,7 @@ export const fetchWeeklyForecast = async (
                 latitude,
                 longitude,
                 daily: ['temperature_2m_max', 'temperature_2m_min', 'weather_code'],
-                timezone: 'auto', // Automatically detect timezone
+                timezone: 'auto',
                 temperature_unit: temperatureUnitParam,
             },
         });
@@ -85,7 +77,7 @@ export const fetchWeeklyForecast = async (
 };
 
 export interface HourlyForecast {
-    time: string; // ISO8601
+    time: string;
     temperature: number;
     precipitation: number;
     condition: string;
@@ -95,13 +87,6 @@ export interface HourlyForecastResponse {
     hourly: HourlyForecast[];
 }
 
-/**
- * Fetches the next 24 hours of hourly weather data for a given location from Open-Meteo.
- * @param latitude - The latitude of the location.
- * @param longitude - The longitude of the location.
- * @returns A Promise that resolves to an object containing the hourly forecast data.
- * @throws Will throw an HttpError if the weather service is unavailable or the request fails.
- */
 export const fetchHourlyForecast = async (
     latitude: number,
     longitude: number

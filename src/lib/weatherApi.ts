@@ -1,9 +1,9 @@
-// IMPORTANT: Replace this with your actual API base URL from your OpenAPI spec
 const API_BASE_URL = '/api/v1'; // Ensure this is correct
 
-// Define interfaces for your data structures
+const API_BASE_URL = '/api/v1';
+
 export interface Location {
-  id: string | number; // Assuming id can be string or number
+  id: string | number;
   name: string;
   type?: string;
   state?: string;
@@ -38,10 +38,8 @@ export const fetchLocations = async (query: string): Promise<LocationsResponse> 
   if (!query || query.trim() === '') {
     throw new Error('Search query cannot be empty.');
   }
-  
   const url = `${API_BASE_URL}/locations/search?query=${encodeURIComponent(query)}`;
   console.log(`Fetching locations: ${url}`);
-
   const response = await fetch(url);
   let errorMessage = 'Failed to fetch locations.';
   if (!response.ok) {
@@ -60,7 +58,6 @@ export const fetchWeeklyForecast = async (latitude: number, longitude: number, u
   if (typeof latitude !== 'number' || typeof longitude !== 'number') {
     throw new Error('Invalid latitude or longitude provided.');
   }
-
   const params = new URLSearchParams({
     latitude: latitude.toString(),
     longitude: longitude.toString(),
@@ -68,7 +65,6 @@ export const fetchWeeklyForecast = async (latitude: number, longitude: number, u
   });
   const url = `${API_BASE_URL}/forecast/week?${params.toString()}`;
   console.log(`Fetching forecast: ${url}`);
-
   const response = await fetch(url);
   if (!response.ok) {
     let errorMessage = `API Error: ${response.status} ${response.statusText}`;

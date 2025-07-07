@@ -6,14 +6,6 @@ type ErrorResponse = {
     error: string;
 };
 
-/**
- * API Route: GET /api/v1/forecast/week
- * Fetches the weekly weather forecast for a given location.
- * Query Parameters:
- * - latitude (required, number): The latitude of the location.
- * - longitude (required, number): The longitude of the location.
- * - units (optional, string: 'metric' | 'imperial'): Defaults to 'metric'.
- */
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<ForecastData | ErrorResponse>

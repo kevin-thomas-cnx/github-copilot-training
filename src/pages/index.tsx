@@ -1,14 +1,11 @@
 import React, { useState, useCallback } from 'react';
-import Head from 'next/head'; // For setting page title, meta tags
+import Head from 'next/head';
 import SearchBar from '@/components/SearchBar';
 import LocationsList from '@/components/LocationsList';
 import WeatherDisplay from '@/components/WeatherDisplay';
 import ErrorAlert from '@/components/ErrorAlert';
-import { fetchLocations, fetchWeeklyForecast, Location, ForecastData } from '@/lib/weatherApi'; // Assuming types are exported
+import { fetchLocations, fetchWeeklyForecast, Location, ForecastData } from '@/lib/weatherApi';
 
-// Define types for state if not already imported
-// type Location = { id: string | number; name: string; type?: string; state?: string; country?: string; latitude: number; longitude: number; airportCode?: string; };
-// type ForecastData = any; // Replace 'any' with a more specific type for your forecast data
 
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -90,11 +87,11 @@ const HomePage: React.FC = () => {
   );
 
   return (
-    <div className="App-Container"> {/* Use a more semantic class or styled-component */}
+    <div className="App-Container">
       <Head>
         <title>Weather Forecast App</title>
         <meta name="description" content="Simple weather forecast application" />
-        <link rel="icon" href="/favicon.ico" /> {/* Make sure favicon.ico is in public folder */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header>

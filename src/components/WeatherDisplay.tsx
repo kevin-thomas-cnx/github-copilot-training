@@ -15,7 +15,6 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ forecastData, locationN
 
   const { forecast, latitude, longitude } = forecastData;
 
-  // Styles for selected unit button
   const selectedStyle: React.CSSProperties = {
     backgroundColor: '#b9fbc0',
     color: '#166534',

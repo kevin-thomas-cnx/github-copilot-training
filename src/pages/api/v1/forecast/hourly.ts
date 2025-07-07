@@ -2,13 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { fetchHourlyForecast, HourlyForecastResponse } from '@/lib/services/forecastService';
 import { HttpError } from '@/lib/utils/errors';
 
-/**
- * API Route: GET /api/v1/forecast/hourly
- * Fetches the next 24 hours of hourly weather data for a given location.
- * Query Parameters:
- * - lat (required, number): Latitude of the location.
- * - lon (required, number): Longitude of the location.
- */
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<HourlyForecastResponse | { error: string }>

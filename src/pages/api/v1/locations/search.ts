@@ -11,7 +11,6 @@ type ErrorResponse = {
     error: string;
 };
 
-// Utility for robust error detection (max resilience for custom error from tests)
 function isHttpError(error: any): error is HttpError {
     return (
         Boolean(error) &&
@@ -21,12 +20,6 @@ function isHttpError(error: any): error is HttpError {
     );
 }
 
-/**
- * API Route: GET /api/v1/locations/search
- * Searches for locations based on a query string.
- * Query Parameters:
- * - query (required, string): The search term for locations.
- */
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<LocationsResponse | ErrorResponse>
@@ -50,7 +43,6 @@ export default async function handler(
     }
 
     try {
-        // Instantiate the service per request
         const service = new LocationService();
         const locations = await service.searchLocations(query);
         res.status(200).json({ locations });

@@ -1,10 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { HttpError } from '../utils/errors'; // Relative path to utils within lib
+import { HttpError } from '../utils/errors';
 
-/**
- * Represents a location with geographical and optional airport information.
- */
 export interface Location {
     id: string;
     name: string;
@@ -19,10 +16,6 @@ export interface Location {
 let loadedLocations: Location[] | null = null;
 let loadError: HttpError | null = null;
 
-/**
- * Loads location data from the JSON file.
- * Caches the data on first successful load.
- */
 export function loadLocationsData(): Location[] {
     // Return cached data if available
     if (loadedLocations) {
@@ -34,8 +27,6 @@ export function loadLocationsData(): Location[] {
     }
 
     try {
-        // 'src/data/locations.json' is expected at the root of your Next.js project.
-        // process.cwd() in a Next.js API route refers to the project root.
         const dataPath = path.join(process.cwd(), 'src', 'data', 'locations.json');
 
         if (!fs.existsSync(dataPath)) {
@@ -55,7 +46,6 @@ export function loadLocationsData(): Location[] {
             throw loadError;
         }
 
-        // Basic validation for location structure could be added here if needed
 
         loadedLocations = jsonData as Location[]; // Store successfully loaded data
         return loadedLocations;
@@ -71,30 +61,15 @@ export function loadLocationsData(): Location[] {
     }
 }
 
-/**
- * Service for managing and searching location data.
- */
 export class LocationService {
     private locations: Location[];
 
-    /**
-     * Initializes a new instance of the LocationService class.
-     * @throws Will throw an HttpError if the locations data cannot be loaded or parsed.
-     */
     constructor() {
         // This will either return cached data or attempt to load,
         // throwing an error if loading failed (either now or on initial module load).
         this.locations = loadLocationsData();
     }
 
-    /**
-     * Searches for locations that match the given query string.
-     * The search is case-insensitive and checks both name and airportCode.
-     * @param query - The search query string.
-     * @returns A Promise that resolves to an array of matching locations.
-     * @throws Will throw an HttpError with status 400 if the query is invalid.
-     * @throws Will throw an HttpError with status 500 if location data is unavailable.
-     */
     async searchLocations(query: string): Promise<Location[]> {
         if (!query || query.trim() === '') {
             throw new HttpError(400, 'Query parameter is missing or invalid.');

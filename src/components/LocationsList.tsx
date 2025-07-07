@@ -1,5 +1,5 @@
 import React from 'react';
-import { Location } from '@/lib/weatherApi'; // Assuming Location type is exported
+import { Location } from '@/lib/weatherApi';
 
 interface LocationsListProps {
   locations: Location[];
