@@ -1,4 +1,6 @@
-Complete the following two tasks in order
+Complete the following two tasks in order.
+
+CONTINUE EXECUTING STEPS UNTIL TASK 2 STEP 6 WHERE YOU ASK THE USER IF THEY WANT TO UPDATE THE USER STORY IN JIRA WITH THE RECOMMENDED UPDATES.
 
 # Task 1 - Grade the User Story
 

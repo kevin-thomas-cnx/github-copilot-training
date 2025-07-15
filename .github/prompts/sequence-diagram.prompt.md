@@ -25,6 +25,13 @@ Return all of the actions in one single block of code.
 
 ## Mermaid.js Syntax Requirements
 
+* When listing participants, do not use quotes around the participant names. For example:
+
+-- This is incorrect: `participant SystemA as "System A"`
+-- This is incorrect: `participant SystemA as System A`
+
+DO NOT PUT QUOTES AROUND PARTICIPANT NAMES!!
+
 * All node text and labels containing spaces, hyphens, special characters (e.g., `&`, `/`, `!`, `?`), or non-alphanumeric characters **must be enclosed in double quotation marks** (e.g., `node_id["Node Label with Spaces"]`, `decision_point{"Is it True?"}`).
     * If a label *itself* needs to contain a double quotation mark, it **must be escaped** using a backslash (`\"`) within the main double-quoted string (e.g., `node_id["A label with an escaped \"quote\" inside"]`).
     * For certain characters that might interfere with Mermaid.js parsing or are difficult to type, consider using their HTML entity equivalents within labels (e.g., `&amp;` for `&`, `&lt;` for `<`, `&gt;` for `>`). This is especially useful for characters that could be interpreted as part of Mermaid's syntax.
