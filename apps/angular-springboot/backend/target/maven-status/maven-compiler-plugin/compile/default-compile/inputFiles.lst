@@ -1,0 +1,10 @@
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/LocationsController.java
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/model/WeeklyForecastResponse.java
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/WeatherAppApplication.java
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/model/ErrorResponse.java
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/model/LocationsResponse.java
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/WeatherService.java
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/model/DailyForecast.java
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/LocationService.java
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/model/Location.java
+/Users/kevin/Documents/Repos/github-copilot-training/apps/angular-springboot/backend/src/main/java/com/example/weatherapp/WeatherController.java

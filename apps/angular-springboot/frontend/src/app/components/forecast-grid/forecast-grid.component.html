@@ -1,0 +1,35 @@
+<div *ngIf="isLoading" class="loading-container">
+  <mat-progress-spinner diameter="36" mode="indeterminate" aria-label="Loading forecast"></mat-progress-spinner>
+</div>
+<div *ngIf="fetchError && !isLoading" class="error-container">
+  <mat-error role="alert">{{ fetchError }}</mat-error>
+</div>
+<div *ngIf="forecast && !isLoading" class="forecast-container">
+  <div class="forecast-header">
+    <h3>7-Day Forecast</h3>
+    <span class="coords">[{{ forecast.latitude | number:'1.4-4' }}, {{ forecast.longitude | number:'1.4-4' }}]</span>
+  </div>
+  <mat-radio-group class="unit-switch" aria-label="Select units" [(ngModel)]="units" (ngModelChange)="fetchForecast()">
+    <mat-radio-button value="metric" aria-label="Switch to Celsius">°C (Metric)</mat-radio-button>
+    <mat-radio-button value="imperial" aria-label="Switch to Fahrenheit">°F (Imperial)</mat-radio-button>
+  </mat-radio-group>
+  <div *ngIf="forecast.forecast.length === 0" class="no-forecast">No forecast data available for these coordinates.</div>
+  <pre *ngIf="forecast && forecast.forecast && forecast.forecast.length === 0">DEBUG: {{ forecast | json }}</pre>
+  <div class="forecast-grid-wrapper">
+    <mat-grid-list cols="3" rowHeight="220px" gutterSize="24px" *ngIf="forecast.forecast && forecast.forecast.length > 0">
+      <mat-grid-tile *ngFor="let day of forecast.forecast">
+        <mat-card class="forecast-card">
+          <mat-card-header>
+            <mat-card-title>{{ getDayLabel(day.date) }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="weather-desc">{{ getWeatherDescription(day.weather_code) }}</div>
+            <div class="temp-max">Max: {{ day.temperature.max | number:'1.1-1' }}°{{ forecast.units === 'imperial' ? 'F' : 'C' }}</div>
+            <div class="temp-min">Min: {{ day.temperature.min | number:'1.1-1' }}°{{ forecast.units === 'imperial' ? 'F' : 'C' }}</div>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <div *ngIf="forecast.forecast && forecast.forecast.length === 0" class="no-forecast">No forecast data available for these coordinates.</div>
+  </div>
+</div>

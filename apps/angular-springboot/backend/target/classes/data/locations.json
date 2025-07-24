@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "name": "New York City",
+    "type": "City",
+    "state": "NY",
+    "country": "USA",
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "airportCode": "JFK"
+  },
+  {
+    "id": "2",
+    "name": "London",
+    "type": "City",
+    "state": "",
+    "country": "UK",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "airportCode": "LHR"
+  },
+  {
+    "id": "3",
+    "name": "Los Angeles International Airport",
+    "type": "Airport",
+    "state": "CA",
+    "country": "USA",
+    "latitude": 33.9416,
+    "longitude": -118.4085,
+    "airportCode": "LAX"
+  },
+  {
+    "id": "4",
+    "name": "Tokyo",
+    "type": "City",
+    "state": "",
+    "country": "Japan",
+    "latitude": 35.6895,
+    "longitude": 139.6917,
+    "airportCode": "HND"
+  },
+  {
+    "id": "5",
+    "name": "Berlin Brandenburg Airport",
+    "type": "Airport",
+    "state": "Brandenburg",
+    "country": "Germany",
+    "latitude": 52.3667,
+    "longitude": 13.5033,
+    "airportCode": "BER"
+  },
+  {
+    "id": "6",
+    "name": "Sydney",
+    "type": "City",
+    "state": "NSW",
+    "country": "Australia",
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "airportCode": "SYD"
+  },
+  {
+    "id": "7",
+    "name": "Dubai International Airport",
+    "type": "Airport",
+    "state": "",
+    "country": "UAE",
+    "latitude": 25.2532,
+    "longitude": 55.3657,
+    "airportCode": "DXB"
+  },
+  {
+    "id": "8",
+    "name": "Toronto Pearson International Airport",
+    "type": "Airport",
+    "state": "ON",
+    "country": "Canada",
+    "latitude": 43.6777,
+    "longitude": -79.6248,
+    "airportCode": "YYZ"
+  },
+  {
+    "id": "9",
+    "name": "Boston",
+    "type": "City",
+    "state": "MA",
+    "country": "USA",
+    "latitude": 42.3601,
+    "longitude": -71.0589,
+    "airportCode": "BOS"
+  }
+]

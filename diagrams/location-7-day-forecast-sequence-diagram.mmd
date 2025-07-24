@@ -1,0 +1,20 @@
+%%{init: {'theme': 'default'}}%%
+sequenceDiagram
+actor User
+participant App as WeatherApp
+participant API as WeatherAPI
+
+User->>App: Enter location name
+note right of App: User provides a <br/> location to search for
+App->>API: GET /locations/search?query=location
+note right of API: API searches for <br/> matching locations <br/> and returns results
+API->>App: LocationsResponse
+App->>User: Display list of locations
+note left of User: User selects a <br/> location from the list
+User->>App: Select location
+note right of App: User selection <br/> triggers forecast lookup
+App->>API: GET /forecast/week?latitude=...&longitude=...
+note right of API: API returns 7-day <br/> weather forecast for <br/> selected location
+API->>App: WeeklyForecastResponse
+App->>User: Display 7-day forecast
+note left of User: User views the <br/> forecast for the <br/> selected location
