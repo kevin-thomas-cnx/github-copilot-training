@@ -161,3 +161,4 @@ coverage/
 implementation-plan/
 
 apps/angular-sprintboot/backend/target/
+.next/
