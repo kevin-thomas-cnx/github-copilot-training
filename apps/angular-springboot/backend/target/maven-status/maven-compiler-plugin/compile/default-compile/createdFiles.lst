@@ -1,0 +1,12 @@
+com/example/weatherapp/LocationService$1.class
+com/example/weatherapp/model/Location.class
+com/example/weatherapp/model/ErrorResponse.class
+com/example/weatherapp/WeatherAppApplication.class
+com/example/weatherapp/WeatherController.class
+com/example/weatherapp/LocationService.class
+com/example/weatherapp/model/LocationsResponse.class
+com/example/weatherapp/model/DailyForecast$Temperature.class
+com/example/weatherapp/model/WeeklyForecastResponse.class
+com/example/weatherapp/model/DailyForecast.class
+com/example/weatherapp/WeatherService.class
+com/example/weatherapp/LocationsController.class

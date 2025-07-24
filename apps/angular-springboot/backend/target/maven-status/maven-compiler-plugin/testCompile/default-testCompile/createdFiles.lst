@@ -1,0 +1,6 @@
+com/example/weatherapp/WeatherControllerTest.class
+com/example/weatherapp/e2e/WeatherApiE2EETest.class
+com/example/weatherapp/e2e/KarateSpringBootRunner.class
+com/example/weatherapp/e2e/WeatherApiE2ETestE2ETest.class
+com/example/weatherapp/LocationServiceTest.class
+com/example/weatherapp/WeatherServiceTest.class

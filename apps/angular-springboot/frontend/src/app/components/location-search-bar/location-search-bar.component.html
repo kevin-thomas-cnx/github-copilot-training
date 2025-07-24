@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit($event)" class="search-form" aria-label="Search for a location" role="search">
+  <mat-form-field appearance="outline" class="search-input" floatLabel="always">
+    <mat-label>Enter city or airport name (e.g., London, LAX)</mat-label>
+    <input matInput
+           [(ngModel)]="searchQuery"
+           name="searchQuery"
+           required
+           aria-label="Location search input"
+           autocomplete="off"
+           [disabled]="loading"
+           (keyup.enter)="onSubmit($event)">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="loading || !searchQuery.trim()" aria-label="Submit location search" class="search-btn">
+    <ng-container *ngIf="!loading">
+      <span class="search-label">Search</span>
+    </ng-container>
+    <mat-progress-spinner *ngIf="loading" diameter="24" mode="indeterminate"></mat-progress-spinner>
+  </button>
+  <mat-error *ngIf="error" role="alert">{{ error }}</mat-error>
+</form>
